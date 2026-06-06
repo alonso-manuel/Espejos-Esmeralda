@@ -108,3 +108,115 @@
     gap: 1rem;
   }
 }
+
+/* ── Lightbox ─────────────────────────────────────────────────────────────── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(3, 7, 5, 0.95);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.lightboxContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: min(90vw, 900px);
+  max-height: 90vh;
+}
+
+.lightboxImg {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border: 1px solid rgba(58, 170, 111, 0.2);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
+}
+
+.lightboxCaption {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.lightboxTag {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background: rgba(42, 122, 79, 0.3);
+  border: 1px solid rgba(58, 170, 111, 0.4);
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: var(--color-primary-lt);
+  margin-bottom: 0.4rem;
+}
+
+.lightboxLabel {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-text);
+  font-style: italic;
+}
+
+.lightboxClose {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: 1px solid rgba(58, 170, 111, 0.3);
+  color: var(--color-accent);
+  font-size: 1.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.lightboxClose:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary-lt);
+}
+
+.lightboxNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: 1px solid rgba(58, 170, 111, 0.3);
+  color: var(--color-accent);
+  font-size: 2.5rem;
+  line-height: 1;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.lightboxNav:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary-lt);
+}
+
+.lightboxPrev { left: 1.5rem; }
+.lightboxNext { right: 1.5rem; }
+
+@media (max-width: 768px) {
+  .lightboxNav {
+    width: 2.2rem;
+    height: 2.2rem;
+    font-size: 1.8rem;
+  }
+
+  .lightboxPrev { left: 0.5rem; }
+  .lightboxNext { right: 0.5rem; }
+}

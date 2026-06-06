@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p \"c:/Users/Alonso/Desktop/espejos-esmeralda/src/assets/gallery\")"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\Alonso\\Desktop\\espejos-esmeralda\\src\\assets"
+    ]
+  }
+}
