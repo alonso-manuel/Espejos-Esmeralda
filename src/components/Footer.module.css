@@ -120,3 +120,38 @@
   font-style: italic;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .brand {
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .social {
+    align-items: center;
+    width: 100%;
+  }
+
+  .pages {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pageCard {
+    min-width: 0;
+    width: 100%;
+    max-width: 300px;
+  }
+}

@@ -138,3 +138,13 @@
   color: var(--color-muted);
   font-style: italic;
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .contacts {
+    gap: 2rem;
+  }
+}

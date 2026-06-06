@@ -1,0 +1,84 @@
+<svg width="260" height="240" viewBox="0 0 260 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#7ee8fa"/>
+      <stop offset="50%"  stop-color="#29b6d4"/>
+      <stop offset="100%" stop-color="#0e7a9e"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#b3f0ff"/>
+      <stop offset="100%" stop-color="#1a8fad"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8fbff"/>
+      <stop offset="100%" stop-color="#3ab8d8"/>
+    </linearGradient>
+    <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#0d5c78"/>
+      <stop offset="100%" stop-color="#1b8fad"/>
+    </linearGradient>
+    <linearGradient id="glow-g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#7ee8fa" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#29b6d4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="text-g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#a0dff0"/>
+      <stop offset="50%"  stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#5cc8e0"/>
+    </linearGradient>
+    <style>
+      @keyframes diamondFloat {
+        0%,100% { transform: translateY(0px) rotate(0deg); }
+        33%      { transform: translateY(-5px) rotate(0.8deg); }
+        66%      { transform: translateY(-3px) rotate(-0.5deg); }
+      }
+      @keyframes shimmer {
+        0%,100% { opacity: 0.15; }
+        50%      { opacity: 0.55; }
+      }
+      @keyframes shimmer2 {
+        0%,100% { opacity: 0.4; }
+        50%      { opacity: 0.9; }
+      }
+      @keyframes pulse-glow {
+        0%,100% { opacity: 0.2; r: 68px; }
+        50%      { opacity: 0.45; r: 76px; }
+      }
+      .diamond-g   { animation: diamondFloat 4s ease-in-out infinite; transform-origin: 130px 108px; }
+      .face-shine  { animation: shimmer 3s ease-in-out infinite; }
+      .face-shine2 { animation: shimmer2 2.5s ease-in-out infinite 0.4s; }
+      .face-shine3 { animation: shimmer 3.5s ease-in-out infinite 0.8s; }
+      .glow-ring   { animation: pulse-glow 3s ease-in-out infinite; }
+      .inner-star  { animation: shimmer2 2s ease-in-out infinite; transform-origin: 130px 108px; }
+    </style>
+  </defs>
+
+  <circle class="glow-ring" cx="130" cy="108" r="68" fill="url(#glow-g)"/>
+
+  <g class="diamond-g">
+    <polygon points="130,20 90,72 130,58 170,72" fill="url(#g3)" class="face-shine"/>
+    <polygon points="130,20 50,72 90,72" fill="url(#g1)" opacity="0.85"/>
+    <polygon points="130,20 170,72 210,72" fill="url(#g2)" opacity="0.7"/>
+    <polygon points="50,72 90,72 130,58 170,72 210,72 130,78" fill="url(#g4)" opacity="0.9"/>
+    <polygon points="50,72  130,78 130,190" fill="url(#g1)" class="face-shine2" opacity="0.8"/>
+    <polygon points="210,72 130,78 130,190" fill="url(#g2)" class="face-shine3" opacity="0.75"/>
+    <polygon points="90,72  130,78 130,140" fill="#1aa8cc" opacity="0.5"/>
+    <polygon points="170,72 130,78 130,140" fill="#0d7a99" opacity="0.4"/>
+    <polygon points="90,72  50,72  130,130" fill="#4dd0ea" opacity="0.25"/>
+    <polygon points="170,72 210,72 130,130" fill="#0a5f7a" opacity="0.25"/>
+    <polygon points="130,20 90,72 130,58 170,72 210,72 130,78 50,72 130,78 130,190 210,72"
+             fill="none" stroke="#b3f0ff" stroke-width="0.6" opacity="0.5"/>
+    <line x1="130" y1="20"  x2="130" y2="58"  stroke="#e0f8ff" stroke-width="0.8" opacity="0.6"/>
+    <line x1="50"  y1="72"  x2="130" y2="190" stroke="#b3f0ff" stroke-width="0.5" opacity="0.4"/>
+    <line x1="210" y1="72"  x2="130" y2="190" stroke="#b3f0ff" stroke-width="0.5" opacity="0.4"/>
+    <line x1="90"  y1="72"  x2="130" y2="78"  stroke="#e0f8ff" stroke-width="0.5" opacity="0.5"/>
+    <line x1="170" y1="72"  x2="130" y2="78"  stroke="#e0f8ff" stroke-width="0.5" opacity="0.5"/>
+    <circle class="inner-star" cx="130" cy="108" r="3" fill="white" opacity="0.9"/>
+    <line x1="130" y1="100" x2="130" y2="116" stroke="white" stroke-width="0.8" opacity="0.7" class="face-shine2"/>
+    <line x1="122" y1="108" x2="138" y2="108" stroke="white" stroke-width="0.8" opacity="0.7" class="face-shine2"/>
+  </g>
+
+  <text x="130" y="215" text-anchor="middle"
+        font-family="Georgia, serif" font-size="17" font-weight="bold"
+        fill="url(#text-g)" letter-spacing="2">Espejos Esmeralda</text>
+</svg>
