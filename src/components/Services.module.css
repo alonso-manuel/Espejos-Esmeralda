@@ -1,0 +1,71 @@
+.section {
+  padding: 8rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  padding: 2.5rem 2rem;
+  border: 1px solid rgba(42, 122, 79, 0.2);
+  background: rgba(26, 74, 48, 0.08);
+  backdrop-filter: blur(4px);
+  transition: border-color var(--transition), transform var(--transition),
+              background var(--transition);
+  cursor: default;
+}
+
+.card:hover {
+  border-color: rgba(58, 170, 111, 0.5);
+  transform: translateY(-4px);
+  background: rgba(26, 74, 48, 0.18);
+}
+
+.icon {
+  font-size: 2rem;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 1.2rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.cardDesc {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  font-weight: 300;
+}

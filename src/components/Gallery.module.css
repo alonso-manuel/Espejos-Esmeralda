@@ -1,0 +1,95 @@
+.section {
+  padding: 6rem 3rem;
+  background: rgba(10, 31, 20, 0.6);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(42, 122, 79, 0.2);
+  cursor: pointer;
+  transition: border-color var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  border-color: rgba(58, 170, 111, 0.5);
+  transform: scale(1.01);
+}
+
+.photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(5, 10, 8, 0.85) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  background: rgba(42, 122, 79, 0.3);
+  border: 1px solid rgba(58, 170, 111, 0.4);
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  color: var(--color-primary-lt);
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
+
+.cardLabel {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-text);
+  font-style: italic;
+}

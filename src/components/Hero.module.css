@@ -1,0 +1,157 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 50%,
+    rgba(5, 10, 8, 0.45) 0%,
+    rgba(5, 10, 8, 0.85) 100%
+  );
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.titleMain {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 9vw, 8rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  color: transparent;
+  background: linear-gradient(135deg, #c8ecd8 0%, #3aaa6f 40%, #1a4a30 70%, #56c28a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 0.15em;
+}
+
+.titleSub {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 9vw, 8rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.25em;
+  color: transparent;
+  background: linear-gradient(135deg, #8ecfab 0%, #56c28a 50%, #3aaa6f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 2rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dividerLine {
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--color-primary-dk));
+}
+
+.dividerLine:last-child {
+  background: linear-gradient(to left, transparent, var(--color-primary-dk));
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--color-muted);
+  max-width: 520px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.ctas {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.85rem 2.5rem;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition),
+              border-color var(--transition), color var(--transition),
+              opacity var(--transition);
+}
+
+.btnPrimary {
+  background: linear-gradient(135deg, var(--color-bg-alt), var(--color-primary-dk));
+  color: var(--color-accent);
+  border: 1px solid var(--color-primary);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(58, 170, 111, 0.3);
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 1px solid rgba(58, 170, 111, 0.4);
+}
+
+.btnOutline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-accent);
+}
+
+/* Scroll indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.5;
+}
+
+.scrollLabel {
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  color: var(--color-primary);
+}
+
+.scrollLine {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--color-primary), transparent);
+  animation: pulse 2s ease-in-out infinite;
+}

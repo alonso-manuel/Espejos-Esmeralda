@@ -1,0 +1,76 @@
+<svg width="174" height="185" viewBox="0 0 174 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="vg1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#7ee8fa"/>
+      <stop offset="100%" stop-color="#2abfce"/>
+    </linearGradient>
+    <linearGradient id="vg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#29d4b0"/>
+      <stop offset="100%" stop-color="#1a8fad"/>
+    </linearGradient>
+    <linearGradient id="vg3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#7ee8fa"/>
+      <stop offset="100%" stop-color="#29d4a0"/>
+    </linearGradient>
+    <linearGradient id="text-vg" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#5cc8e0"/>
+      <stop offset="100%" stop-color="#29d4b0"/>
+    </linearGradient>
+    <style>
+      @keyframes vdFloat {
+        0%,100% { transform: translateY(0px); }
+        50%      { transform: translateY(-6px); }
+      }
+      @keyframes strokeDraw {
+        from { stroke-dashoffset: 400; }
+        to   { stroke-dashoffset: 0; }
+      }
+      @keyframes dGlow {
+        0%,100% { opacity: 0.6; }
+        50%      { opacity: 1; }
+      }
+      @keyframes starSpin {
+        0%   { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .vd-g     { animation: vdFloat 4.5s ease-in-out infinite; transform-origin: 87px 68px; }
+      .d-shape  { animation: dGlow 3s ease-in-out infinite; }
+      .vd-star  { animation: starSpin 8s linear infinite; transform-origin: 87px 68px; }
+      .vd-outline {
+        stroke-dasharray: 400;
+        stroke-dashoffset: 400;
+        animation: strokeDraw 1.8s ease forwards 0.3s;
+      }
+    </style>
+  </defs>
+
+  <g class="vd-g">
+    <path class="d-shape"
+      d="M88,18 L88,118 Q88,118 120,118 Q155,118 155,68 Q155,18 120,18 Z"
+      fill="url(#vg2)" opacity="0.85"/>
+    <path d="M100,32 L100,104 Q100,104 118,104 Q140,104 140,68 Q140,32 118,32 Z"
+      fill="#050a08" opacity="0.75"/>
+    <polygon class="vd-outline"
+      points="18,18 87,118 156,18 142,18 87,98 32,18"
+      fill="none" stroke="url(#vg1)" stroke-width="3.5" stroke-linejoin="round"/>
+    <polygon
+      points="18,18 87,118 156,18 142,18 87,98 32,18"
+      fill="url(#vg1)" opacity="0.18"/>
+    <line x1="105" y1="18" x2="65" y2="118"
+          stroke="url(#vg3)" stroke-width="2.5" opacity="0.7"/>
+    <g class="vd-star">
+      <polygon points="87,60 89,66 95,68 89,70 87,76 85,70 79,68 85,66"
+               fill="white" opacity="0.95"/>
+    </g>
+    <polygon points="18,18 87,118 156,18 142,18 87,98 32,18"
+             fill="none" stroke="white" stroke-width="0.6" opacity="0.2"/>
+  </g>
+
+  <text x="87" y="148" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="13" font-weight="700"
+        fill="url(#text-vg)" letter-spacing="3">VITROFUSIÓN</text>
+  <text x="87" y="166" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="13" font-weight="400"
+        fill="#7ee8fa" letter-spacing="5" opacity="0.8">DECOR</text>
+  <line x1="30" y1="175" x2="144" y2="175" stroke="#2abfce" stroke-width="0.5" opacity="0.4"/>
+</svg>

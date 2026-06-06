@@ -1,0 +1,122 @@
+.footer {
+  border-top: 1px solid rgba(42, 122, 79, 0.15);
+  padding: 3rem;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ── Brand left ── */
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 220px;
+}
+
+.brandLogo {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(58, 170, 111, 0.3));
+}
+
+.brandTagline {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+/* ── Social right ── */
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.socialLabel {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.35em;
+  color: var(--color-primary);
+}
+
+.pages {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* Cada tarjeta de página */
+.pageCard {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid rgba(42, 122, 79, 0.2);
+  background: rgba(26, 74, 48, 0.08);
+  text-decoration: none;
+  transition: border-color var(--transition), background var(--transition),
+              transform var(--transition);
+  min-width: 200px;
+}
+
+.pageCard:hover {
+  border-color: rgba(58, 170, 111, 0.5);
+  background: rgba(26, 74, 48, 0.2);
+  transform: translateY(-2px);
+}
+
+.pageLogo {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.pageInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pageName {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.pageFollowers {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+/* ── Bottom bar ── */
+.bottom {
+  border-top: 1px solid rgba(42, 122, 79, 0.1);
+  padding-top: 1.5rem;
+}
+
+.copy {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  opacity: 0.6;
+  font-style: italic;
+  text-align: center;
+}

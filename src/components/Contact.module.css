@@ -1,0 +1,140 @@
+.section {
+  padding: 8rem 3rem;
+}
+
+.inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-display);
+  font-size: 0.65rem;
+  letter-spacing: 0.4em;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--color-text);
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--color-muted);
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+/* Form */
+.form {
+  text-align: left;
+}
+
+.input {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  background: rgba(26, 74, 48, 0.12);
+  border: 1px solid rgba(42, 122, 79, 0.3);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  outline: none;
+  margin-bottom: 1.2rem;
+  transition: border-color var(--transition);
+}
+
+.input:focus {
+  border-color: var(--color-primary);
+}
+
+.input::placeholder {
+  color: rgba(142, 207, 171, 0.5);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.error {
+  font-family: var(--font-body);
+  color: #e57373;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--color-bg-alt), var(--color-primary-dk));
+  color: var(--color-accent);
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+/* Success */
+.success {
+  padding: 3rem;
+  border: 1px solid rgba(58, 170, 111, 0.4);
+  background: rgba(26, 74, 48, 0.15);
+}
+
+.successTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  letter-spacing: 0.15em;
+}
+
+.successMsg {
+  font-family: var(--font-body);
+  color: var(--color-muted);
+  margin-top: 0.8rem;
+  font-style: italic;
+}
+
+/* Contact info */
+.contacts {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.contactItem {
+  text-align: center;
+}
+
+.contactIcon {
+  font-size: 1.4rem;
+}
+
+.contactLabel {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--color-primary);
+  margin-top: 0.4rem;
+}
+
+.contactValue {
+  font-family: var(--font-body);
+  color: var(--color-muted);
+  font-style: italic;
+}

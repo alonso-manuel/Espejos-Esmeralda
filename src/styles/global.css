@@ -1,0 +1,70 @@
+/* ── Reset & Base ─────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050a08;
+  color: #e8ede9;
+  font-family: 'Cormorant Garamond', serif;
+  overflow-x: hidden;
+}
+
+/* ── CSS Variables ────────────────────────────────────────────────────────── */
+:root {
+  --color-bg:         #050a08;
+  --color-bg-alt:     #0a1f14;
+  --color-primary:    #3aaa6f;
+  --color-primary-dk: #2a7a4f;
+  --color-primary-lt: #56c28a;
+  --color-accent:     #c8ecd8;
+  --color-muted:      #8ecfab;
+  --color-text:       #e8ede9;
+
+  --font-display: 'Cinzel', serif;
+  --font-body:    'Cormorant Garamond', serif;
+
+  --transition: 0.25s ease;
+}
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--color-bg); }
+::-webkit-scrollbar-thumb  { background: var(--color-primary-dk); border-radius: 3px; }
+
+/* ── Canvas de fondo ──────────────────────────────────────────────────────── */
+#mirror-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ── Contenido sobre canvas ───────────────────────────────────────────────── */
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Animaciones globales ─────────────────────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(1.15); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
